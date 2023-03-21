@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 2</title>
+    <link rel="stylesheet" href="zadatak8.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="java.js"></script>
+   
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="position: fixed; width: 100%;">
+        <div class="container">
+            <a class="navbar-brand text-light" href="index.html">SONJA MILIĆ</a>
+            <button class="navbar-toggler text-light border-none" style="background-color: rgb(72, 204, 186);"type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">Menu
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="portfolio.html">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="index.html#sekcija1">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="index.html#sekcija2">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="survey.html">SURVEY</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav><br><br>
+
+
+    <div id="div1" style="display: block; background-color: rgb(72, 204, 186); height: 660px;">
+    <div class="container-fluid2"><br><br>
+        <div class="text-dark text-center" style="font-size:x-large;"><em><strong>Portfolio</strong></em><br>
+            <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>WONDERING IS TECH IS RIGHT FOR
+                    YOU?</strong></div>
+        </div><br>
+        <p class="text-dark text-center">Take this 3 - minute survey and find out.</p>
+        <div class="text-dark text-center">
+            <button class="btn text-light btn-lg" id="btnnext" onclick="change()"
+                style="background-color:black; font-size: small;">START</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    <div id="div2" style="display: none; background-color: rgb(72, 204, 186); height: 660px;">
+    <div class="container-fluid3"><br><br>
+        <div class="row px-5 d-flex justify-content-center">
+            <div class="col-md-6">
+                <div class="text-center" style="margin-left: 30px; background-color: rgb(190, 235, 229); justify-content: center; width: 130px; padding: 5px;">Question 1 of 5</div>
+        <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>Before we dive in, what's your
+                name?</strong></div>
+    </div><br>
+    <p class="text-secondary text-center">(First name is fine!)</p>
+    <div class="row px-5 d-flex justify-content-center">
+        <div class="col-md-6">
+            <label for="name" class="form-label"></label>
+            <input type="text" class="form-control" id="name1" style="border: 2px solid black;"
+                placeholder="Type your answer here...">
+        </div>
+        <div class="text-dark text-center"><br>
+            <button class="btn text-light btn-lg" id="btnnext" onclick="change1()"
+                style="background-color:black; font-size: small;">NEXT</button>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+    
+    
+    <div id="div3" style="display: none; background-color: rgb(72, 204, 186); height: 810px;">
+    <div class="container-fluid4"><br><br>
+        <div class="row px-5 d-flex justify-content-center">
+            <div class="col-md-8">
+        <div class="text-center" style="margin-left: 30px; background-color: rgb(190, 235, 229); justify-content: center; width: 130px; padding: 5px;">Question 2 of 5</div>
+        <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>Where are you in your
+                career?</strong></div>
+    </div>
+    <div class="row px-5 d-flex justify-content-center">
+        <div class="col-md-8">
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio1" name="opcije" type="radio" value="V1"
+                    style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px;">
+                <label for="Radio1">I know what career i want, and i need to learn some skills.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio2" name="opcije" type="radio" value="V2">
+                <label for="Radio2">I like my career - or, at least, i dont HATE it - but i keep wondering if theres
+                    something more out there.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio3" name="opcije" type="radio" value="V3">
+                <label for="Radio3">I took a break from my career, and now im ready to get back into the
+                    workforce.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio4" name="opcije" type="radio" value="V4">
+                <label for="Radio4">I want to make a career change, but im also super busy.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio5" name="opcije" type="radio" value="V5">
+                <label for="Radio5">Im just starting out.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio6" name="opcije" type="radio" value="V6">
+                <label for="Radio6">Im burnt out from going into an office every day and ready to make my own
+                    hours.</label><br>
+            </div>
+            <div class="form-check" style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="margin: 5px;" value="7" onchange="answer();" required>
+                <label class="form-check-label" for="flexRadioDefault">
+                    Other (please enter)!
+                </label>
+            </div>
+            <div class="form-floating mb-3" style="display: none;" id="answer">
+                <input type="text" class="form-control" id="floatingInput1" placeholder="Message" style="border: solid 2px black;">
+                <label for="floatingInput">Type your answer here...</label>
+            </div>
+            <div class="text-dark text-center"><br>
+                <button class="btn text-light btn-lg" id="btnnext" onclick="change2()"
+                    style="background-color:black; font-size: small;">NEXT</button>
+            </div>
+    </div>
+        </div>
+    </div>
+    </div>
+</div>
+    
+    <div id="div4" style="display: none; background-color: rgb(72, 204, 186); height: 825px;">
+    <div class="container-fluid5"><br><br>
+        <div class="row px-5 d-flex justify-content-center">
+            <div class="col-md-8">
+        <div class="text-center" style="margin-left: 30px; background-color: rgb(190, 235, 229); justify-content: center; width: 130px; padding: 5px;">Question 3 of 5</div>
+        <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>Whats your biggest concern about<br>
+                learning tech skills?</strong></div>
+    </div>
+    <div class="row px-5 d-flex justify-content-center">
+        <div class="col-md-8">
+            <div class="form-check" style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio1" name="opcije" type="radio" value="V1"
+                    style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px;">
+                <label for="Radio1">Even if i learned the skills, with my weird resume, why would they hire me over a
+                    computer science grad?</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio2" name="opcije" type="radio" value="V2">
+                <label for="Radio2">I dont have the time to learn new skills.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio3" name="opcije" type="radio" value="V3">
+                <label for="Radio3">I dream of a remote job - but do those jobs REALLY exist for, you knoy, REAL people like
+                    me?</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio4" name="opcije" type="radio" value="V4">
+                <label for="Radio4">Its too late in my career/life to make this big of a change.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio5" name="opcije" type="radio" value="V5">
+                <label for="Radio5">Learning tech skills is expensive and Im on a tight budget - im not sure its worth
+                    it.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio6" name="opcije" type="radio" value="V6">
+                <label for="Radio6">My career is okay and learning tech skills is expensive - why should i rock the
+                    boat?</label><br>
+            </div>
+            <div class="text-dark text-center"><br>
+                <button class="btn text-light btn-lg" id="btnnext" onclick="change3()"
+                    style="background-color:black; font-size: small;">NEXT</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+ 
+
+    <div id="div5" style="display: none; background-color: rgb(72, 204, 186); height: 895px;">
+    <div class="container-fluid6"><br><br>
+        <div class="row px-5 d-flex justify-content-center">
+            <div class="col-md-8">
+        <div class="text-center" style="margin-left: 30px; background-color: rgb(190, 235, 229); justify-content: center; width: 130px; padding: 5px;">Question 4 of 5</div>
+        <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>Picture zhe perfect workplace for
+                you.<br> What do you see?</strong></div>
+    </div>
+    <div class="row px-5 d-flex justify-content-center">
+        <div class="col-md-8">
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio1" name="opcije" type="radio" value="V1"
+                    style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px;">
+                <label for="Radio1">A bustling agency where im surrounded by incredible creative talent.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio2" name="opcije" type="radio" value="V2">
+                <label for="Radio2">A collaborative environment where im LEADING the team..</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio3" name="opcije" type="radio" value="V3">
+                <label for="Radio3">A collaborative environment where im a full - time member of a team working shoulder -
+                    to - shoulder with fun, experienced team members.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio4" name="opcije" type="radio" value="V4">
+                <label for="Radio4">A coworking spot! I work with my team sometimes in - person and then have the freedom to
+                    finish my work around my busy scheldule.</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio5" name="opcije" type="radio" value="V5">
+                <label for="Radio5">A video conference with coworkers on my screen...and the beach behind it..</label><br>
+            </div>
+            <div style="background-color: rgb(190, 235, 229); border: 2px solid black; padding: 5px; margin-bottom: 2px;">
+                <input id="Radio6" name="opcije" type="radio" value="V6">
+                <label for="Radio6">Work at home in the morning, with time for kids soccer practice in the
+                    afternoon.</label><br>
+            </div>
+            <div class="text-dark text-center"><br>
+                <button class="btn text-light btn-lg" id="btnnext" onclick="change4()"
+                    style="background-color:black; font-size: small;">NEXT</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+    
+    <div id="div6" style="display: none; background-color: rgb(72, 204, 186); height: 660px;">
+    <div class="container-fluid7"><br><br>
+        <div class="row px-5 d-flex justify-content-center">
+            <div class="col-md-8">
+        <div class="text-center" style="margin-left: 30px; background-color: rgb(190, 235, 229); justify-content: center; width: 130px; padding: 5px;">Question 5 of 5</div>
+        <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>Just one more thing! How much you
+                like this survey?</strong></div>
+    </div>
+    <div class="row px-5 d-flex justify-content-center">
+        <div class="col-md-8">
+            <p class="text-secondary text-center">(We hope think youll like it!)</p>
+            <label for="customRange2" class="form-label">1-5</label>
+            <input type="range" class="form-range" id="customRange2" min="0" max="5">
+        </div>
+        <div class="text-dark text-center"><br>
+            <button class="btn text-light btn-lg" id="btnnext1" onclick="change5()"
+                style="background-color:black; font-size: small;">SUMBIT</button>
+        </div>
+    </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        </div>
+
+        <div id="div7" style="display: none; background-color: rgb(72, 204, 186); height: 660px;">
+            <div class="container-fluid8"><br><br>
+                <div class="text-dark text-center" id="ime" style="font-size:x-large;"><strong>Hi </strong><br>
+                    <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>Thank you for your time!</strong></div>
+                    <p>We appreciate your opinion. Oooopss, sorry to disappoint you.</p>
+                    <span><i class="fa-solid fa-face-sad-tear d-block justify-content-center" style="color: white; font-size: 50px;"></i></span>
+                </div><br>
+            </div>
+            </div>
+            </div>
+            <div id="div8" style="display: none; background-color: rgb(72, 204, 186); height: 660px;">
+                <div class="container-fluid8"><br><br>
+                    <div class="text-dark text-center" id="ime" style="font-size:x-large;"><strong>Hi </strong><br>
+                        <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>Thank you for your time!</strong></div>
+                        <p>We appreciate your opinion. We hope it will be better next time!</p>
+                        <span><i class="fa-solid fa-face-frown d-block justify-content-center" style="color: white; font-size: 50px;"></i></span>
+                    </div><br>
+                </div>
+                </div>
+                </div>
+                <div id="div9" style="display: none; background-color: rgb(72, 204, 186); height: 660px;">
+                    <div class="container-fluid8"><br><br>
+                        <div class="text-dark text-center" id="ime" style="font-size:x-large;"><strong>Hi </strong><br>
+                            <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>Thank you for your time!</strong></div>
+                            <p>We appreciate your opinion. Golden middle!</p>
+                            <span><i class="fa-solid fa-face-smile d-block justify-content-center" style="color: white; font-size: 50px;"></i></span>
+                        </div><br>
+                    </div>
+                    </div>
+                    </div>
+                    <div id="div10" style="display: none; background-color: rgb(72, 204, 186); height: 660px;">
+                        <div class="container-fluid8"><br><br>
+                            <div class="text-dark text-center" id="ime" style="font-size:x-large;"><strong>Hi </strong><br>
+                                <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>Thank you for your time!</strong></div>
+                                <p>We appreciate your opinion. Thanks for the very good rating!</p>
+                                <span><i class="fa-solid fa-face-smile-beam d-block justify-content-center" style="color: white; font-size: 50px;"></i></span>
+                            </div><br>
+                        </div>
+                        </div>
+                        </div>
+                        <div id="div11" style="display: none; background-color: rgb(72, 204, 186); height: 660px;">
+                            <div class="container-fluid8"><br><br>
+                                <div class="text-dark text-center" id="ime" style="font-size:x-large;"><strong>Hi </strong><br>
+                                    <div class="tekst1 text-center" style="font-size:xx-large; color:black;"><strong>Thank you for your time!</strong></div>
+                                    <p>We appreciate your opinion. Perfect! We are glad to meet your requirements! </p>
+                                    <span><i class="fa-solid fa-face-grin-hearts d-block justify-content-center" style="color: white; font-size: 50px;"></i></span>
+                                </div><br>
+                            </div>
+                            </div>
+                            </div>
+
+
+
+
+
+            
+ <script src="kod.js"></script>
