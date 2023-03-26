@@ -1,0 +1,71 @@
+footer{
+    background-color: rgb(18, 17, 27);
+    height: 50px;
+    color: white;
+    text-align: center;    
+    padding-top: 15px;
+}
+
+
+.col:hover{
+    transform: scale(1.2);
+}
+
+col{
+    transition: 2s;
+}
+
+
+.fa-brands:hover{
+    background-color:  white;
+    opacity: 30%;
+}
+.fa-brands{
+    transition: 0.5s;
+}
+
+.tekst:hover{
+    text-shadow: green;
+    font-size: large;
+    opacity: 30%;
+}
+.tekst{
+    transition: 1s;
+}
+
+
+.container-fluid1{
+    height: 500px;
+    background-image: url(plain-48CCBA.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+@media (max-width: 576px){
+    .container-fluid1{
+        height: 1050px;
+    }
+}
+
+@media (max-width: 768px){
+    .container-fluid1{
+        height: 1200px;
+    }
+}
+
+.hover-part{
+    background-color: rgb(72, 204, 186);
+    opacity: 0;
+    transition: 2s ease-in-out all;
+}
+.hover-part:hover{
+    opacity: 1;
+}
+
+.img{
+    height: 400px;
+    background-image: url(courses-cover.jpg);
+    background-position: center;
+    background-size: cover;
+}

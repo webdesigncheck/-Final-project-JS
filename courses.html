@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 2</title>
+    <link rel="stylesheet" href="zadatakAjax.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="position: fixed; width: 100%;">
+        <div class="container">
+            <a class="navbar-brand text-light" href="index.html">SONJA MILIĆ</a>
+            <button class="navbar-toggler text-light border-none" style="background-color: rgb(72, 204, 186);"type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">Menu
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="portfolio.html">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="index.html#sekcija1">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="index.html#sekcija2">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="survey.html">SURVEY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="courses.html">COURSES</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+
+    <div class="img">
+        <div class="container-fluid"><br><br>
+                <div class="text-center" style="margin-top: 100px; font-size:xx-large;"><strong>COURSES</strong></div>
+            </div>
+        </div>
+
+        <div class="pozadina">
+            <div class="container-fluid" style="background-color: rgb(8, 140, 180); height: 700px;"><br>
+                <table id="tabela" class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Starting date</th>
+                            <th>Duration</th>
+                            <th>Price</th>
+                            <th>Details</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table><br>
+                <button class="btn btn-outline-light text-light" style="float: right;" onclick="addNew()">View Reservation</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalUnos" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Make reservation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="forma" role="form">
+                        <div class="form-group">
+                            <label for="prezime">Name:</label>
+                            <input id="ime" type="text" name="ime" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="prezime">Surname:</label>
+                            <input id="prezime" type="text" name="prezime" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email1">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="komentar">Note:</label>
+                            <textarea id="komentar" name="komentar" class="form-control"></textarea>
+                        </div><br>
+                        <button id="posalji" type="submit" class="btn btn-success">Save reservation</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <h3 class="tekst text-muted text-center">Osnove programiranja</h3>
+            <div class="modal-body text-center" style="height: 500px;">
+                <img src="kurs-osnove-programiranja.jpg" style="height: 300px; width: 400px; border-radius: 3px; justify-items: center; margin-top: 20px;" class="modal-img" alt="modal img"><br><br>
+                Ukoliko i vi želite karijeru u IT sektoru a pitate se kako uopšte početi, kako je najlakše<br>
+                naučiti programiranje i da li je teško savladati programiranje, ukoliko želite da načinite prvi korak i uđete u<br>
+                svet informacionih tehnologija SmartInIt kursevi programiranja su pravi izbor za Vas.<br>
+                250 €
+                <br>
+                    <button type="button" class="btn text-center text-light xField" style="background-color: rgb(72, 204, 186); justify-items: center;" data-bs-dismiss="modal"><strong>x</strong>  Close Window</button>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script>
+        $(document).ready(() => {
+            getData();
+
+            $("#tabela tbody").on('click', 'button', function () {
+                if ($(this).hasClass("btn-light")) {
+                    let id = $(this).attr("id").split("_")[1];
+                    $.ajax({
+                        url: "http://localhost:3000/ajax/" + id,
+                        type: 'DELETE',
+                        dataType: 'json',
+                        success: () => {
+                            alert("Obrisano");
+                            $(this).parent().parent().remove();
+                        },
+                        error: () => alert("Neuspelo brisanje")
+                    });
+
+                }
+                /*else if ($(this).hasClass("btn-outline-primary")) {
+                    $("#gallery-modal").modal('toggle');
+                }
+                */
+                else if ($(this).hasClass("btn-outline-primary")) {
+                    $("#modalUnos").modal('toggle');
+
+                    var btnThis = $(this);
+                    var tr = this.parentNode.parentNode;
+                    console.log(tr);
+                    debugger;
+                    $("#ime").attr("placeholder", tr.cells[1].childNodes[0].data);
+                    $("#prezime").val(tr.cells[2].childNodes[0].data);
+
+                    $("#forma").validate({
+                        rules: {
+                            ime: {
+                                required: true,
+                                minlength: 3
+                            },
+                            email: "required",
+                            prezime: {
+                                required: true,
+                                minlength: 3
+                            },
+                            jmbg: {
+                                required: true,
+                                minlength: 13,
+                            }
+                        },
+                        messages: {
+                            ime: {
+                                required: "Unesite vase ime",
+                                minlength: "Ime mora imati bar 3 karaktera"
+                            },
+                            email: "Unesite validan email",
+                            prezime: {
+                                required: "Unesite vase prezime",
+                                minlength: "Prezime mora imati bar 3 karaktera"
+                            },
+                            jmbg: {
+                                required: "Unesite vas JMBG",
+                                minlength: "JMBG ima 13 karaktera"
+                            },
+                            komentar: "Unesite komentar",
+                        },
+                        submitHandler: function () {
+                            var imef = $("#ime").val();
+                            var prezimef = $("#prezime").val();
+                            var emailf = $("#email").val();
+                            var jmbgf = $("#jmbg").val();
+                            var komentarf = $("#komentar").val();
+                            var osoba = {
+                                ime: imef, prezime: prezimef, email:
+                                    emailf, JMBG: jmbgf, komentar: komentarf
+                            };
+                            $.ajax({
+                                url: "http://localhost:3000/ajax/" + btnThis.attr("id").split("_")[1],
+                                type: "PUT",
+                                data: osoba,
+                                success: (podatak) => {
+                                    $("#forma").trigger('reset');
+                                    $("#modalUnos").modal('toggle');
+                                    $("#tabela tbody").empty();
+                                    getData();
+                                }
+                            })
+                        }
+                    });
+                }
+            });
+
+
+        });
+
+
+        function getData() {
+            var zahtev = $.ajax({
+                type: "GET",
+                url: "http://localhost:3000/ajax"
+            });
+
+            zahtev.done((data) => {
+                $.each(data, (i, podatak) => {
+                    $("tbody").append('<tr>' +
+                        '<td>' + podatak.course + '</td>' +
+                        '<td>' + podatak.startingdate + '</td>' +
+                        '<td>' + podatak.duration + '</td>' +
+                        '<td>' + podatak.price + '</td>' +
+                        '<td>' + podatak.details + '</td>' +
+                        /*'<td><button id="edit_' + podatak.id + '" class="btn btn-outline-primary">View details</button></td>' +*/
+                        '<td><button id="edit_' + podatak.id + '" class="btn btn-outline-primary">Make reservation</button></td>' +
+                        '<td><button id="delete_' + podatak.id + '" class="btn btn-light"></button></td>' +
+                        '</tr>');
+                });
+                $("#tabela").dataTable();
+            });
+
+            zahtev.fail((err) => {
+                alert(err.statusText);
+            })
+        }
+
+        function addNew() {
+            $("#modalUnos").modal('toggle');
+            $("#forma").validate({
+                rules: {
+                    ime: {
+                        required: true,
+                        minlength: 3
+                    },
+                    email: "required",
+                    prezime: {
+                        required: true,
+                        minlength: 3
+                    },
+                    jmbg: {
+                        required: true,
+                        minlength: 13,
+                    }
+                },
+                messages: {
+                    ime: {
+                        required: "Unesite vase ime",
+                        minlength: "Ime mora imati bar 3 karaktera"
+                    },
+                    email: "Unesite validan email",
+                    prezime: {
+                        required: "Unesite vase prezime",
+                        minlength: "Prezime mora imati bar 3 karaktera"
+                    },
+                    jmbg: {
+                        required: "Unesite vas JMBG",
+                        minlength: "JMBG ima 13 karaktera"
+                    },
+                    komentar: "Unesite komentar",
+                },
+                submitHandler: function () {
+                    var imef = $("#ime").val();
+                    var prezimef = $("#prezime").val();
+                    var emailf = $("#email").val();
+                    var jmbgf = $("#jmbg").val();
+                    var komentarf = $("#komentar").val();
+                    var osoba = {
+                        ime: imef, prezime: prezimef, email:
+                            emailf, JMBG: jmbgf, komentar: komentarf
+                    };
+                    $.ajax({
+                        url: "http://localhost:3000/ajax",
+                        type: "POST",
+                        data: osoba,
+                        success: (podatak) => {
+                            $("#forma").trigger('reset');
+                            $("#modalUnos").modal('toggle');
+                            // $("#tabela tbody").empty();
+                            // getData();
+                            $("tbody").append('<tr>' +
+                                '<td>' + podatak.course + '</td>' +
+                                '<td>' + podatak.startingdate + '</td>' +
+                                '<td>' + podatak.duration + '</td>' +
+                                '<td>' + podatak.price + '</td>' +
+                                '<td>' + podatak.details + '</td>' +
+                                /*'<td><button id="edit_' + podatak.id + '" class="btn btn-outline-primary">View details</button></td>' +*/
+                                '<td><button id="edit_' + podatak.id + '" class="btn btn-outline-primary">Make reservation</button></td>' +
+                                '<td><button id="delete_' + podatak.id + '" class="btn btn-light"></button></td>' +
+                                '</tr>');
+                        }
+                    })
+                }
+            });
+        }
+    </script>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid py-5" style="background-color: rgb(56, 56, 82); height: 350px; width: 100%;">
+    <div class="row">
+        <div class="col-md-4 text-light text-center">
+            <strong>LOCATION</strong><br><br>SMARTINIT Novi Sad <br>Serbia<br><br>
+        </div>
+        <div class="col-md-4 text-light text-center">
+            <strong>AROUND THE WEB</strong><br><br>  
+            <i class="fa-brands fa-facebook-f" style="border-radius: 8%; border: white solid 1px; padding: 2%; width: 10%;"></style></i>
+            <i class="fa-brands fa-twitter" style="border-radius: 8%; border: white solid 1px; padding: 2%; width: 10%;"></style></i>
+            <i class="fa-brands fa-linkedin-in" style="border-radius: 8%; border: white solid 1px; padding: 2%; width: 10%;"></style></i>
+            <i class="fa-brands fa-chrome" style="border-radius: 8%; border: white solid 1px; padding: 2%; width: 10%;"></style></i>
+</div>
+        <div class="col-md-4 text-light text-center">
+            <strong>ABOUT SMARTINIT</strong><br><br> PanonIt Code Academy -><a href="">Start Course.</a>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <footer>
+        &copy Sonja Milić 2023
+    </footer>
+</body>
+</html>
